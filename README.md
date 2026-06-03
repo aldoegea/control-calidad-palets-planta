@@ -23,3 +23,7 @@ Las cuestiones a resolver son las siguientes:
 
 ## Jupyter Notebook
 🔗 [Archivo *.ipynb original](https://github.com/aldoegea/control-calidad-palets-planta/blob/main/QC_PlantaProduccion.ipynb)
+
+
+## Resultado
+Estoy muy contento con el resultado porque he cumplido todos los objetivos satisfactoriamente. El sistema es capaz de detectar y contar los diferentes tableros de cada palet, así como chequear su integridad.
