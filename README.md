@@ -26,4 +26,22 @@ Las cuestiones a resolver son las siguientes:
 
 
 ## Resultado
-Estoy muy contento con el resultado porque he cumplido todos los objetivos satisfactoriamente. El sistema es capaz de detectar y contar los diferentes tableros de cada palet, así como chequear su integridad.
+Estoy muy contento con el resultado porque he cumplido todos los objetivos satisfactoriamente. El sistema es capaz de detectar y contar los diferentes tableros de cada palet, así como chequear su integridad. De hecho, es esta última parte la más interesante conceptualmente:
+
+1. Para cada tablero vertical se comprueba:
+
+`fill_ratio`: porcentaje de píxeles blancos dentro de la caja. Sirve para detectar tableros incompletos, con partes rotas o con una inclinación/desviación irregular.
+
+`continuidad_filas`: porcentaje de filas con suficiente presencia de píxeles blancos. Indica si el tablero mantiene una forma vertical continua.
+
+`continuidad_columnas`: porcentaje de columnas con suficiente presencia de píxeles blancos. Ayuda a detectar estrechamientos, muescas o roturas laterales.
+
+2. Para los tableros horizontales se usa el mismo planteamiento pero adaptado a su forma y teniendo en cuenta que están parcialmente tapados por los verticales:
+
+`fill_ratio`: medida orientativa de ocupación de píxeles blancos dentro de la caja. No es decisivo porque no se ven los tableros completos (quedan ocluidos por los verticales).
+
+`continuidad_filas`: comprueba si existe verdaderamente un tablero horizontal. Si solo hay unos pocos trozos o la pieza está muy rota, esa banda no se verá tan clara. No es del todo decisivo debido a la oclusión de las piezas horizontales.
+
+`cobertura_visible`: analiza los tramos visibles entre los tableros verticales para confirmar que el tablero horizontal está presente donde debería verse.
+
+Con estas métricas, el código detecta si falta algún tablero o si alguno está defectuoso, y finalmente marca el palet como correcto o defectuoso.
