@@ -11,7 +11,7 @@ Los palets tienen la siguiente composición:
 ## Imágenes
 Las imágenes adjuntas se encuentran en la carpeta `camera_top`. Estamos utilizando imágenes de rango: el valor del píxel representa la profundidad para esta posición concreta, no el color. Son archivos tiff de 16 bits, donde 0 representa la profundidad más lejana desde la cámara.
 
-## Proyecto
+## Guía
 
 Las cuestiones a resolver son las siguientes: 
 1. Generar una imagen normalizada de la imagen TIFF. Esto producirá una imagen con mayor contraste que la original, que podremos identificar a primera vista.  
@@ -19,3 +19,7 @@ Las cuestiones a resolver son las siguientes:
 3. Hallar los contornos de los tableros en ambas imágenes.
 4. Contar el número de tableros.
 5. Control de calidad de los tableros.
+
+
+## Jupyter Notebook
+> 🔗[archivo ipynb original](https://github.com/aldoegea/control-calidad-palets-planta/blob/main/estructura_palets.png)
