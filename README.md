@@ -22,4 +22,4 @@ Las cuestiones a resolver son las siguientes:
 
 
 ## Jupyter Notebook
-> 🔗[archivo ipynb original](https://github.com/aldoegea/control-calidad-palets-planta/blob/main/estructura_palets.png)
+🔗[archivo ipynb original](https://github.com/aldoegea/control-calidad-palets-planta/blob/main/QC_PlantaProduccion.ipynb)
